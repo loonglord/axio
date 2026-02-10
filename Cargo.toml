@@ -1,0 +1,28 @@
+[package]
+name = "axio"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.101"
+axum = "0.8.8"
+bb8 = "0.9.1"
+config = "0.15.19"
+futures-util = "0.3.31"
+http-body-util = "0.1.3"
+redis = { version = "1.0.3", features = ["bb8", "tokio-comp"] }
+serde = { version = "1.0.228", features = ["derive"] }
+sqlx = { version = "0.8.6", features = ["postgres", "runtime-tokio-rustls"] }
+thiserror = "2.0.18"
+tokio = "1.49.0"
+tower = "0.5.3"
+tower-http = { version = "0.6.8", features = [
+    "compression-full",
+    "cors",
+    "request-id",
+    "trace",
+] }
+tracing = "0.1.44"
+tracing-appender = "0.2.4"
+tracing-subscriber = { version = "0.3.22", features = ["env-filter"] }
+validator = { version = "0.20.0", features = ["derive"] }
