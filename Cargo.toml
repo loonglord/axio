@@ -4,13 +4,13 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-anyhow = "1.0.101"
+anyhow = "1.0.102"
 axum = "0.8.8"
 bb8 = "0.9.1"
 config = "0.15.19"
-futures-util = "0.3.31"
+futures-util = "0.3.32"
 http-body-util = "0.1.3"
-redis = { version = "1.0.3", features = ["bb8", "tokio-comp"] }
+redis = { version = "1.0.4", features = ["bb8", "tokio-comp"] }
 serde = { version = "1.0.228", features = ["derive"] }
 sqlx = { version = "0.8.6", features = ["postgres", "runtime-tokio-rustls"] }
 thiserror = "2.0.18"
